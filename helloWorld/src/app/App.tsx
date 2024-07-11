@@ -1,15 +1,22 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
-import React, { useRef, useState } from 'react';
-import { TamaguiProvider, View, Text, Theme } from 'tamagui';
+import React, { useEffect, useState } from 'react';
+import { TamaguiProvider, View, Text, Theme, getConfig } from '@tamagui/web';
 
 import tamaguiConfig from './tamaguiConfig';
 import { Button } from 'tamagui';
 import { Plus } from '@tamagui/lucide-icons';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-// const Camera = require('@tamagui/lucide-icons/dist/cjs/icons/Camera');
-
 export const App = () => {
+  const [foundConfig, setFoundConfig] = useState(null);
+
+  useEffect(() => {
+    const c = getConfig();
+    console.log('tamgauiConfig:', c);
+    setTimeout(() => {
+      setFoundConfig(c);
+    }, 2000);
+  }, []);
+
   return (
     <TamaguiProvider defaultTheme="dark" config={tamaguiConfig}>
       <Theme name="light">
@@ -23,12 +30,27 @@ export const App = () => {
           flexDirection="column"
         >
           <Text fontSize="$5">Hello World</Text>
-          <Button marginTop="$10" bordered padded size={'$2'}>
+          <Button
+            marginTop="$10"
+            bordered
+            padded
+            size={'$2'}
+            borderRadius={'$2'}
+          >
             Hello button
           </Button>
-          <Button icon={<Plus />} marginTop="$10" bordered padded size={'$2'}>
-            Icon Button!
-          </Button>
+          {!!foundConfig && (
+            <Button
+              icon={<Plus />}
+              marginTop="$10"
+              bordered
+              padded
+              size={'$2'}
+              borderRadius={'$2'}
+            >
+              Icon Button!
+            </Button>
+          )}
         </View>
       </Theme>
     </TamaguiProvider>

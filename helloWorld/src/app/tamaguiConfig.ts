@@ -1,5 +1,5 @@
 // import { config } from '@tamagui/config/v3';
-import { createFont, createTamagui, createTokens } from 'tamagui';
+import { createFont, createTokens, createTamagui } from 'tamagui';
 
 const interFont = createFont({
   family: 'Inter, Helvetica, Arial, sans-serif',
@@ -52,7 +52,7 @@ export const tokens = createTokens({
   },
 });
 
-const tamaguiConfig = createTamagui({
+export const conf = {
   fonts: {
     // for tamagui, heading and body are assumed
     heading: interFont,
@@ -70,9 +70,13 @@ const tamaguiConfig = createTamagui({
       color: tokens.color.white,
     },
   },
-});
-// this makes typescript properly type everything based on the config
+};
 
+const tamaguiConfig = createTamagui(conf);
+
+console.log(`createTamagui done!`);
+
+// this makes typescript properly type everything based on the config
 type Conf = typeof tamaguiConfig;
 
 declare module 'tamagui' {

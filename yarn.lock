@@ -3107,7 +3107,7 @@
     "@tamagui/use-controllable-state" "1.102.1"
     reforest "^0.13.0"
 
-"@tamagui/helpers-icon@1.102.1":
+"@tamagui/helpers-icon@1.102.1", "@tamagui/helpers-icon@^1.102.1":
   version "1.102.1"
   resolved "https://registry.yarnpkg.com/@tamagui/helpers-icon/-/helpers-icon-1.102.1.tgz#32ffa550fb1e075bfb63d6281a5641bc25e23f9b"
   integrity sha512-s83zVdKOt9y2sUCy2yH8GxhZ5V96yu42LEjfY0/5qU7POAPB+whqRnd2bDmCFRJ1BQM1z/8goVV6+saeoVGxbA==
@@ -3647,7 +3647,7 @@
   dependencies:
     "@tamagui/web" "1.102.1"
 
-"@tamagui/web@1.102.1":
+"@tamagui/web@1.102.1", "@tamagui/web@^1.102.1":
   version "1.102.1"
   resolved "https://registry.yarnpkg.com/@tamagui/web/-/web-1.102.1.tgz#a328ceb3d17961fd49e98ab1e3e49d45de523683"
   integrity sha512-gvDXzoZ/3lM9xmCSuKxK8Jw9ce5hc7Rx4PT9A3p3NvXjOmOXwUYaBL9WzK2zB4axhA2/KoA1Jo33CO4m6lzIYA==
