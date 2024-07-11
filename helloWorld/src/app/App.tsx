@@ -26,9 +26,9 @@ export const App = () => {
           <Button marginTop="$10" bordered padded size={'$2'}>
             Hello button
           </Button>
-          {/* <Button icon={<Plus />} marginTop="$10" bordered padded size={'$2'}>
+          <Button icon={<Plus />} marginTop="$10" bordered padded size={'$2'}>
             Icon Button!
-          </Button> */}
+          </Button>
         </View>
       </Theme>
     </TamaguiProvider>
